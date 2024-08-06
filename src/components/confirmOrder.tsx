@@ -5,10 +5,10 @@ const Confirm = () => {
   const {openModal, BtnOpenModal, cartItems, calculateTotalPrice} = useShopingCartContex()
 
   if (openModal) {
-    return <div className="fixed inset-0 flex items-center justify-center backdrop-blur-md bg-black/50">
+    return <div className="fixed inset-0 mob:overflow-auto tab:overflow-auto flex items-center justify-center backdrop-blur-md bg-black/50">
         
         
-        <div className="w-1/4 h-3/4 bg-slate-100 flex flex-col items-center p-4 rounded-lg ">
+        <div className="mob:w-12/13 mob:h-3/4 tab:h-3/4 mob:mx-2 des:w-2/4 des:h-3/4 bg-slate-100 flex flex-col items-center p-4 rounded-lg ">
 
           <div className="flex items-center mb-2"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M21 32.121L13.5 24.6195L15.6195 22.5L21 27.879L32.3775 16.5L34.5 18.6225L21 32.121Z" fill="#1EA575"/>

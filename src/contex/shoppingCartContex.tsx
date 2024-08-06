@@ -33,6 +33,7 @@ export const ShopingCartProvider = ({children} : IShopingCartProvider) => {
 
     const handleIncreaseQty = (id : number) => {
 
+        
         SetCartItems((currentItems) => {
             let selectedItem = currentItems.find((item) => item.id == id)
             

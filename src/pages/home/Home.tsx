@@ -8,10 +8,10 @@ const Home = () => {
 
     function checkClass (check : boolean) {
         if (check) {
-            return "flex row-auto h-screen mx-auto justify-between overflow-hidden"
+            return "flex flex-col row-auto h-screen items-center mx-auto justify-between des:flex des:flex-row des:items-start overflow-hidden"
         }
         else {
-            return "flex row-auto h-screen mx-auto justify-between"
+            return "flex flex-col row-auto h-screen items-center mx-auto justify-between des:flex des:flex-row des:items-start"
         }
     }
 
