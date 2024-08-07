@@ -18,6 +18,8 @@ interface IShoppingCartContex {
     calculateTotalPrice : () => number
     BtnOpenModal : () => void
     openModal : boolean
+    handelOpenSidebar : () => void
+    sidebar : boolean
 }
 
 export const ShoppingCartContex = createContext({} as IShoppingCartContex)
@@ -30,6 +32,7 @@ export const ShopingCartProvider = ({children} : IShopingCartProvider) => {
 
     const [cartItems, SetCartItems] = useState<IcartItem[]>([])
     const [openModal, setOpenModal] = useState(false)
+    const [sidebar, OpenSidebar] = useState(false)
 
     const handleIncreaseQty = (id : number) => {
 
@@ -99,15 +102,16 @@ export const ShopingCartProvider = ({children} : IShopingCartProvider) => {
     }
 
     const BtnOpenModal = () => {
-        if (openModal) {
-            setOpenModal(false)
-        }
-        else {
-            setOpenModal(true)
-        } 
+        return openModal ? setOpenModal(false) : setOpenModal(true) 
     }
 
-    return <ShoppingCartContex.Provider value={{cartItems, handleIncreaseQty, handleDecreaseQty, showQty, remove, calculateTotalPrice, BtnOpenModal, openModal}}>
+    
+
+    const handelOpenSidebar = () => {
+        return sidebar ? OpenSidebar(false) : OpenSidebar(true)
+    }
+
+    return <ShoppingCartContex.Provider value={{cartItems, handleIncreaseQty, handleDecreaseQty, showQty, remove, calculateTotalPrice, BtnOpenModal, openModal, handelOpenSidebar, sidebar}}>
         {children}
     </ShoppingCartContex.Provider>
 }
