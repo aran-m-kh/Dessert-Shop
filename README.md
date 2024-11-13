@@ -30,9 +30,6 @@ Users should be able to:
 ### Screenshot
 
 ![](./design/desktop.png)
-![](./design/tablets.png) 
-![](./design/mobie.png)
-![](./design/card.png)
 
 
 ### Links
