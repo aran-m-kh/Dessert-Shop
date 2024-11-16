@@ -18,7 +18,7 @@ const Confirm = () => {
           <h1 className="text-3xl font-bold ml-2">Order Confirmed</h1></div>
           <p className="text-sm text-slate-500">we hope you enjoy your food</p>
         
-        <div className="bg-stone-200 rounded-lg  my-4 w-11/12 p-2 overflow-auto">{cartItems.map((item, index) =>
+        <div className="bg-stone-200 rounded-lg  my-4 w-11/12 p-2 overflow-auto">{cartItems.map((item) =>
                 data.map((data) =>{
                     if (item.id === data.id) {
                         return <div className="grid grid-cols-8 gap-1 my-2 pb-1 items-center border border-b-stone-300">
