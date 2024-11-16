@@ -42,7 +42,7 @@ const DivButton = ({variant , id, ...rest} : TDiv) => {
     }
 
     else if (variant === "confirm") {
-        return <button onClick={BtnOpenModal} className="bg-orange-800 text-white rounded-3xl w-5/6 h-10 mx-2 my-3 p-1 transition-all duration-300 ease-in-out cursor-pointer select-none hover:border-emerald-200 hover:bg-emerald-700 focus:shadow-xs focus:no-underline">
+        return <button onClick={BtnOpenModal} className="bg-orange-800 mob:bg-emerald-800 tab:bg-emerald-800 text-white rounded-3xl w-5/6 tab:w-2/5 h-10 mx-2 my-3 p-1 transition-all duration-300 ease-in-out cursor-pointer select-none hover:border-emerald-200 hover:bg-emerald-700 focus:shadow-xs focus:no-underline">
             Confirm Order   
         </button>
     }

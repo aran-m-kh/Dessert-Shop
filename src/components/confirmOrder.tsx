@@ -5,7 +5,7 @@ const Confirm = () => {
   const {openModal, BtnOpenModal, cartItems, calculateTotalPrice} = useShopingCartContex()
 
   if (openModal) {
-    return <div className="fixed inset-0 mob:overflow-auto tab:overflow-auto flex items-center justify-center backdrop-blur-md bg-black/50">
+    return <div className="fixed inset-0 mob:overflow-auto tab:overflow-auto flex items-center justify-center backdrop-blur-md bg-black/50 z-50">
         
         
         <div className="mob:w-12/13 mob:h-3/4 tab:h-3/4 mob:mx-2 des:w-2/4 des:h-3/4 bg-slate-100 flex flex-col items-center p-4 rounded-lg ">
